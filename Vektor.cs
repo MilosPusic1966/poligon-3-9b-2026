@@ -8,7 +8,7 @@ namespace poligon_3_9b_2026
 {
     internal class Vektor
     {
-        Tacka pocetak, kraj;
+        public Tacka pocetak, kraj;
         public Vektor (Tacka A, Tacka B)
         {
             pocetak = A;
@@ -19,13 +19,13 @@ namespace poligon_3_9b_2026
             Tacka Nova = new Tacka(kraj.x - pocetak.x, kraj.y - pocetak.y);
             return Nova;
         }
-        public double SP(Vektor a, Vektor b)
+        public static double SP(Vektor a, Vektor b)
         {
             Tacka aC = a.Centriraj();
             Tacka bC = b.Centriraj();
             return aC.x * bC.x + aC.y*bC.y;
         }
-        public double VP(Vektor a, Vektor b)
+        public static double VP(Vektor a, Vektor b)
         {
             Tacka aC = a.Centriraj();
             Tacka bC = b.Centriraj();
