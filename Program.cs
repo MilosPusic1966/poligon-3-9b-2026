@@ -11,6 +11,13 @@ namespace poligon_3_9b_2026
         static void Main(string[] args)
         {
             // Milos Pusic
+            // Tacka prva = new Tacka();
+            // Console.WriteLine(prva.d());
+            Tacka A = new Tacka(1,2);
+            Tacka B = new Tacka(2,3);
+            Vektor AB = new Vektor(A,B);
+            Tacka C = AB.Centriraj();
+            Console.WriteLine(C.d());
         }
     }
 }
