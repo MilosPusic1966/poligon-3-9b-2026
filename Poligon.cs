@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace poligon_3_9b_2026
 {
@@ -17,7 +18,18 @@ namespace poligon_3_9b_2026
         }
         public static Poligon unos() 
         {
-            return null;
+            Console.WriteLine("Koliko temena?");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Poligon novi = new Poligon(n);
+            for (int i = 0; i < n; i++)
+            {
+                novi.teme[i] = new Tacka();
+                Console.WriteLine("T[{0}].x =", i+1);
+                novi.teme[i].x = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("y koord tacke T({0})=", i + 1);
+                novi.teme[i].y = Convert.ToDouble(Console.ReadLine());
+            }
+            return novi;
         }
         public void stampa()
         {
@@ -25,7 +37,14 @@ namespace poligon_3_9b_2026
         }
         public void snimi()
         {
-
+            StreamWriter izlaz = new StreamWriter("poligon.txt");
+            izlaz.WriteLine(br_temena);
+            for (int i = 0; i < br_temena; i++)
+            {
+                izlaz.WriteLine(teme[i].x);
+                izlaz.WriteLine(teme[i].y);
+            }
+            izlaz.Close();
         }
         public static Poligon ucitaj()
         {
