@@ -33,7 +33,11 @@ namespace poligon_3_9b_2026
         }
         public void stampa()
         {
-
+            Console.WriteLine("Poligon ima {0} temena", br_temena);
+            for (int i = 0; i < br_temena; i++)
+            {
+                Console.WriteLine("Koordinate {0}. tacke su x={1} i y={2}", i + 1, teme[i].x, teme[i].x);
+            }
         }
         public void snimi()
         {
@@ -48,7 +52,16 @@ namespace poligon_3_9b_2026
         }
         public static Poligon ucitaj()
         {
-            return null;
+            StreamReader ulaz = new StreamReader("poligon.txt");
+            int n = Convert.ToInt32(ulaz.ReadLine());
+            Poligon novi = new Poligon(n);
+            for (int i = 0; i < n; i++)
+            {
+                novi.teme[i] = new Tacka();
+                novi.teme[i].x = Convert.ToDouble(ulaz.ReadLine());
+                novi.teme[i].y = Convert.ToDouble(ulaz.ReadLine());
+            }
+            return novi;
         }
     }
 }

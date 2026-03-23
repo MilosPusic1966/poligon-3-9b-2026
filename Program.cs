@@ -35,8 +35,10 @@ namespace poligon_3_9b_2026
             Vektor a = new Vektor(prva, druga);
             Console.WriteLine(Ravan.SIS(a, A, B));
             */
-            Poligon prvi = Poligon.unos();
-            prvi.snimi();
+            // Poligon prvi = Poligon.unos();
+            Poligon prvi = Poligon.ucitaj();
+            // prvi.snimi();
+            prvi.stampa();
         }
     }
 }
