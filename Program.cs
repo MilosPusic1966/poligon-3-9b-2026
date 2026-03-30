@@ -39,6 +39,7 @@ namespace poligon_3_9b_2026
             Poligon prvi = Poligon.ucitaj();
             // prvi.snimi();
             prvi.stampa();
+            Console.WriteLine("obim={0}", prvi.obim());
         }
     }
 }

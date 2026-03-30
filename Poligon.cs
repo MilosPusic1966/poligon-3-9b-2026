@@ -36,7 +36,7 @@ namespace poligon_3_9b_2026
             Console.WriteLine("Poligon ima {0} temena", br_temena);
             for (int i = 0; i < br_temena; i++)
             {
-                Console.WriteLine("Koordinate {0}. tacke su x={1} i y={2}", i + 1, teme[i].x, teme[i].x);
+                Console.WriteLine("Koordinate {0}. tacke su x={1} i y={2}", i + 1, teme[i].x, teme[i].y);
             }
         }
         public void snimi()
@@ -62,6 +62,19 @@ namespace poligon_3_9b_2026
                 novi.teme[i].y = Convert.ToDouble(ulaz.ReadLine());
             }
             return novi;
+        }
+        public double obim()
+        {
+            Vektor a;
+            double obim = 0;
+            for (int i = 0; i < br_temena-1; i++)
+            {
+                a = new Vektor(teme[i], teme[i + 1]);
+                obim += a.duzina();
+            }
+            a = new Vektor(teme[br_temena-1], teme[0]);
+            obim += a.duzina();
+            return obim;
         }
     }
 }
