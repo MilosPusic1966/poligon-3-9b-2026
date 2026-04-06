@@ -41,6 +41,7 @@ namespace poligon_3_9b_2026
             // prvi.stampa();
             // Console.WriteLine("obim={0}", prvi.obim());
             Console.WriteLine("konveksan={0}", prvi.konveksan());
+            Console.WriteLine("povrsina={0}", prvi.povrsina());
         }
     }
 }

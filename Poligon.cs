@@ -123,7 +123,13 @@ namespace poligon_3_9b_2026
         }
         public double povrsina()
         {
-            return 0;
+            double plus=0, minus=0;
+            for (int i = 0; i < br_temena; i++)
+            {
+                plus += teme[i].x * teme[(i + 1) % br_temena].y;
+                minus += teme[i].y * teme[(i + 1) % br_temena].x;
+            }
+            return Math.Abs(plus-minus)/2;
         }
         public bool tacka_u(Tacka T)
         {
