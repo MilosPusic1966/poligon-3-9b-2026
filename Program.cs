@@ -35,11 +35,12 @@ namespace poligon_3_9b_2026
             Vektor a = new Vektor(prva, druga);
             Console.WriteLine(Ravan.SIS(a, A, B));
             */
-            // Poligon prvi = Poligon.unos();
-            Poligon prvi = Poligon.ucitaj();
+            Poligon prvi = Poligon.unos();
+            // Poligon prvi = Poligon.ucitaj();
             // prvi.snimi();
-            prvi.stampa();
-            Console.WriteLine("obim={0}", prvi.obim());
+            // prvi.stampa();
+            // Console.WriteLine("obim={0}", prvi.obim());
+            Console.WriteLine("konveksan={0}", prvi.konveksan());
         }
     }
 }
